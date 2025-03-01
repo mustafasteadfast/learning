@@ -6,11 +6,13 @@ void main() {
   person.name = "John";
   person.family = "Doe";
   person.age = 30;
+  person.isMarried = true;
 
   // info for person2
   person2.name = "Jane";
   person2.family = "Doe";
   person2.age = 25;
+  person2.isMarried = false;
 
   // display info for person instance
   person.display();
@@ -26,8 +28,9 @@ class Person {
   String? name;
   String? family;
   int? age;
+  bool? isMarried;
 
   void display() {
-    print("My name is $name $family and I am $age years old.");
+    print("My name is $name $family and I am $age years old. I am ${isMarried == true ? 'married' : 'not married'}.");
   }
 }
